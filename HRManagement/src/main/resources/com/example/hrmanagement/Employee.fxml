@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="458.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hrmanagement.EmployeeController">
+   <children>
+      <Text fill="#0f55bf" layoutX="20.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, Employee" wrappingWidth="328.5830078125">
+         <font>
+            <Font name="Avenir Heavy" size="32.0" />
+         </font>
+      </Text>
+      <Button layoutX="43.0" layoutY="329.0" mnemonicParsing="false" onAction="#onInsertClick" prefHeight="26.0" prefWidth="58.0" text="Insert" />
+      <TextField fx:id="iid" layoutX="70.0" layoutY="96.0" prefHeight="26.0" prefWidth="108.0" />
+      <TextField fx:id="iposition" layoutX="70.0" layoutY="207.0" prefHeight="26.0" prefWidth="108.0" />
+      <TextField fx:id="iname" layoutX="71.0" layoutY="149.0" prefHeight="26.0" prefWidth="108.0" />
+      <Button layoutX="151.0" layoutY="329.0" mnemonicParsing="false" onAction="#onUpdateClick" text="Update" />
+      <Button layoutX="138.0" layoutY="382.0" mnemonicParsing="false" onAction="#onLoadClick" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: transparent; -fx-border-color: #0f55bf;" text="Load Data" />
+      <TableView fx:id="table" layoutX="249.0" layoutY="95.0" prefHeight="345.0" prefWidth="386.0">
+        <columns>
+           <TableColumn fx:id="Id" prefWidth="64.0" text="Id" />
+           <TableColumn fx:id="Name" prefWidth="100.39761352539062" text="Name" />
+           <TableColumn fx:id="Position" minWidth="0.0" prefWidth="120.79800415039062" text="Position" />
+           <TableColumn fx:id="Salary" prefWidth="98.0" text="Salary" />
+        </columns>
+      </TableView>
+      <Button layoutX="413.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleDashboardButton" text="Dashboard" textFill="#0f55bf" />
+      <Button layoutX="516.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleLogOutButton" style="-fx-background-color: #0f55bf;" text="Logout" textFill="WHITE" />
+      <Label layoutX="50.0" layoutY="101.0" text="id" />
+      <Label layoutX="23.0" layoutY="154.0" text="name" />
+      <Label layoutX="33.0" layoutY="267.0" text="Salary" />
+      <TextField fx:id="isalary" layoutX="72.0" layoutY="262.0" prefHeight="26.0" prefWidth="108.0" />
+      <Label layoutX="16.0" layoutY="212.0" text="Position" />
+      <Button layoutX="43.0" layoutY="383.0" mnemonicParsing="false" onAction="#onDeleteClick" prefHeight="26.0" prefWidth="58.0" text="Delete" />
+
+   </children>
+</AnchorPane>
